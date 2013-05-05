@@ -3,6 +3,6 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 @import 'sass-bootstrap/lib/bootstrap';
 
-.container {
-	
+.container-fluid {
+	border-left: 10px solid #45b6ca;
 }
