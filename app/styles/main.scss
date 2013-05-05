@@ -29,15 +29,16 @@ body {
 			padding: 0 20px;
 
 				h1 {
-					float: left;
-					margin: 0;
-					padding: 15px 0;
-					font-size: 32px;
-					line-height: 28px;
-					font-weight: 400;
 					font-family: 'Raleway', sans-serif;
 					font-style: normal;
 					color: $medium-grey;
+					float: left;
+					margin: 0;
+					padding: 15px 0;
+					font-size: 16px;
+					line-height: 28px;
+					font-weight: 400;
+					
 
 					em {
 						color: $medium-blue;
@@ -48,15 +49,15 @@ body {
 				ul {
 					float: right;
 					margin-top: 20px;
-					font-size: 18px;
-					line-height: 28px;
+					font-size: 14px;
+					line-height: 15px;
 					font-weight: 200;
 					margin-bottom: 0;
 					list-style: none;
 
 					li {
 						float: left;
-						margin-left: 65px;
+						margin-left: 15px;
 
 						a {
 							color: $medium-grey;
@@ -68,11 +69,36 @@ body {
 		}
 		header {
 			border-left: 10px solid $top-border;
-			background: transparent url('../images/header-bg.png') no-repeat;
+			background: transparent url('../images/header-bg.png') center bottom no-repeat;
 			padding: 20px;
 
 			h2 {
-			}
+					color: $light-blue;
+					text-align: center;
+					font-size: 70px;
+					line-height: 40px;
+					font-weight: 200;
+					text-transform: uppercase;
+					letter-spacing: 12px;
+					margin: 30px 10px;
+				}
+
+				p {
+					font-size: 18px;
+					line-height: 30px;
+					text-align: left;
+					font-weight: 200;
+					padding: 0 20px 50px 16px;
+
+					a {
+						color: $medium-blue;
+						border-bottom: 1px dotted $medium-blue;
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
 		}
 	}
 }
@@ -93,10 +119,27 @@ body {
 				border-left: 10px solid $top-border;
 				padding: 0 130px;
 
+				h1 {
+					float: left;
+					margin: 0;
+					padding: 15px 0;
+					font-size: 32px;
+					line-height: 28px;
+					font-weight: 400;
+					font-family: 'Raleway', sans-serif;
+					font-style: normal;
+					color: $medium-grey;
+
+					em {
+						color: $medium-blue;
+						font-style: normal;
+					}
+				}
+
 			}
 			header {
 				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') no-repeat;
+				background: transparent url('../images/header-bg.png') left bottom no-repeat;
 				
 				h2 {
 					color: $light-blue;
@@ -144,14 +187,77 @@ body {
 
 			nav#primary {
 				border-left: 10px solid $top-border;
+				padding: 0 130px;
+
+				h1 {
+					float: left;
+					margin: 0;
+					padding: 15px 0;
+					font-size: 22px;
+					line-height: 18px;
+					font-weight: 400;
+					font-family: 'Raleway', sans-serif;
+					font-style: normal;
+					color: $medium-grey;
+
+					em {
+						color: $medium-blue;
+						font-style: normal;
+					}
+				}
+
+				ul {
+					float: right;
+					margin-top: 16px;
+					font-size: 18px;
+					line-height: 28px;
+					font-weight: 200;
+					margin-bottom: 0;
+					list-style: none;
+
+					li {
+						float: left;
+						margin-left: 65px;
+
+						a {
+							color: $medium-grey;
+						}
+					}
+				}
 
 			}
 			header {
 				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') no-repeat;
+				background: transparent url('../images/header-bg.png') center bottom no-repeat;
+				
+				h2 {
+					color: $light-blue;
+					text-align: center;
+					font-size: 150px;
+					line-height: 20.29px;
+					font-weight: 200;
+					text-transform: uppercase;
+					letter-spacing: 12px;
+					margin: 80px 60px 100px 60px;
+				}
 
 				p {
-					font-size: 1em;
+					font-size: 20px;
+					line-height: 1.3em;
+					text-align: left;
+					font-weight: 200;
+					font-size: 37px;
+					line-height: 55px;
+					padding: 0 128px 110px 128px;
+
+					a {
+						color: $medium-blue;
+						border-bottom: 1px dotted $medium-blue;
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
 				}
 			}
 		}
@@ -173,15 +279,16 @@ body {
 			}
 			header {
 				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') no-repeat;
+				background: transparent url('../images/header-bg.png') center bottom no-repeat;
 			}
 		}
 	}
 }
  
 /* Landscape phones and down */
-/*
+
 @media (max-width: 480px) {
 
+
+
 }
-*/
