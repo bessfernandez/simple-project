@@ -17,6 +17,7 @@ body {
 	font-size:100%;
     line-height:1.125em;
     color: $medium-grey;
+    padding: 0;
 
 	img { 
 	  max-width: 100%;
@@ -194,48 +195,40 @@ body {
 
 
 /* Large desktop */
-@media (min-width: 1200px) {
+@media (min-width: 980px) {
 	
 	body {
-		padding: 0;
-
 		.container-fluid {
-			width: 1200px;
+			max-width: 1200px;
 			margin: 0 auto;
 
 			nav#primary {
-				border-left: 10px solid $first-level-border;
 				padding: 0 130px;
 
 				h1 {
-					float: left;
-					margin: 0;
 					padding: 15px 0;
 					font-size: 32px;
 					line-height: 28px;
 					font-weight: 400;
-					font-family: 'Raleway', sans-serif;
-					font-style: normal;
-					color: $medium-grey;
+				}
 
-					em {
-						color: $medium-blue;
-						font-style: normal;
+				ul {
+					margin-top: 20px;
+					font-size: 18px;
+
+					li {
+						margin-left: 60px;
 					}
 				}
 
 			}
 			header {
-				border-left: 10px solid $first-level-border;
-				background: transparent url('../images/header-bg.png') center bottom no-repeat;
+				background-position: top left;
 				
 				h2 {
-					color: $light-blue;
-					text-align: center;
 					font-size: 170px;
 					line-height: 40.29px;
 					font-weight: 200;
-					text-transform: uppercase;
 					letter-spacing: 12px;
 					margin: 80px 60px 100px 60px;
 				}
@@ -247,11 +240,9 @@ body {
 					font-weight: 200;
 					font-size: 37px;
 					line-height: 55px;
-					padding: 0 128px 110px 128px;
+					padding: 0 128px 45px 128px;
 
 					a {
-						color: $medium-blue;
-						border-bottom: 1px dotted $medium-blue;
 
 						&:hover {
 							text-decoration: none;
@@ -351,7 +342,7 @@ body {
 	}
 
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -443,21 +434,7 @@ body {
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-	body {
-		padding: 0;
-
-		.container-fluid {
-			padding: 0;
-
-			nav#primary {
-				border-left: 10px solid $first-level-border;
-
-			}
-			header {
-				border-left: 10px solid $first-level-border;
-			}
-		}
-	}
+	
 }
  
 /* Landscape phones and down */
