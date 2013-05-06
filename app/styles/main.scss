@@ -28,7 +28,7 @@ body {
 	.container-fluid {
 
 		nav#primary {
-			border-left: 10px solid $first-level-border;
+			border-left: 15px solid $first-level-border;
 			padding: 0 15px;
 
 				h1 {
@@ -66,7 +66,7 @@ body {
 
 		}
 		header {
-			border-left: 10px solid $first-level-border;
+			border-left: 15px solid $first-level-border;
 			background: transparent url('../images/header-bg.png') center bottom no-repeat;
 			padding: 15px;
 
@@ -74,9 +74,9 @@ body {
 				color: $light-blue;
 				text-align: center;
 				font-size: 3.2em;
+				letter-spacing: .15em;
 				font-weight: 400;
 				text-transform: uppercase;
-				letter-spacing: 12px;
 				margin: 10px 0px;
 			}
 
@@ -84,7 +84,7 @@ body {
 				font-size: 1em;
 				line-height: 1.8em;
 				text-align: left;
-				font-weight: 500;
+				font-weight: 400;
 				padding: 0;
 				margin: 20px 0 70px 0;
 
@@ -99,7 +99,7 @@ body {
 			}
 		}
 		nav.carousel {
-			border-left: 10px solid $second-level-border;
+			border-left: 15px solid $second-level-border;
 			background: transparent url('../images/paper-texture.png') repeat;
 			margin: 0 auto;
 
@@ -229,7 +229,6 @@ body {
 					font-size: 170px;
 					line-height: 40.29px;
 					font-weight: 200;
-					letter-spacing: 12px;
 					margin: 80px 60px 100px 60px;
 				}
 
@@ -237,7 +236,6 @@ body {
 					font-size: 2em;
 					line-height: 1.3em;
 					text-align: left;
-					font-weight: 200;
 					font-size: 37px;
 					line-height: 55px;
 					padding: 0 128px 45px 128px;
@@ -251,7 +249,7 @@ body {
 				}
 			}
 			nav.carousel {
-				border-left: 10px solid $second-level-border;
+				border-left: 15px solid $second-level-border;
 				background: transparent url('../images/paper-texture.png') repeat;
 				margin: 0 auto;
 
