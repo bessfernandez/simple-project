@@ -4,41 +4,40 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'sass-bootstrap/lib/responsive';
 
-$top-border: #45b6ca;
-$middle-border: #ce4dd6;
-$bottom-border: #ce4dd6;
+$first-level-border: #45b6ca;
+$second-level-border: #298c9d;
+$third-level-border: #126a79;
 $light-blue: #45b6ca;
 $medium-blue: #45b6ca;
 $medium-grey: #999;
 
-img { 
-  max-width: 100%;
-  height: auto;
-}
+
 body {
-	padding: 0;
 	font-family: 'Raleway', sans-serif;
 	font-size:100%;
     line-height:1.125em;
     color: $medium-grey;
 
+	img { 
+	  max-width: 100%;
+	  height: auto;
+	}
+
 
 	.container-fluid {
+
 		nav#primary {
-			border-left: 10px solid $top-border;
-			padding: 0 20px;
+			border-left: 10px solid $first-level-border;
+			padding: 0 15px;
 
 				h1 {
 					font-family: 'Raleway', sans-serif;
-					font-style: normal;
 					color: $medium-grey;
 					float: left;
 					margin: 0;
-					padding: 15px 0;
-					font-size: 16px;
-					line-height: 28px;
+					padding: 5px 0;
+					font-size: .95em;
 					font-weight: 400;
-					
 
 					em {
 						color: $medium-blue;
@@ -48,16 +47,14 @@ body {
 				
 				ul {
 					float: right;
-					margin-top: 20px;
-					font-size: 14px;
-					line-height: 15px;
-					font-weight: 200;
-					margin-bottom: 0;
+					font-size: .8em;
+					font-weight: 400;
+					margin: 15px 0 0 0;
 					list-style: none;
 
 					li {
 						float: left;
-						margin-left: 15px;
+						margin: 0 0 0 11px;
 
 						a {
 							color: $medium-grey;
@@ -68,37 +65,128 @@ body {
 
 		}
 		header {
-			border-left: 10px solid $top-border;
+			border-left: 10px solid $first-level-border;
 			background: transparent url('../images/header-bg.png') center bottom no-repeat;
-			padding: 20px;
+			padding: 15px;
 
 			h2 {
-					color: $light-blue;
-					text-align: center;
-					font-size: 70px;
-					line-height: 40px;
-					font-weight: 200;
-					text-transform: uppercase;
-					letter-spacing: 12px;
-					margin: 30px 10px;
-				}
+				color: $light-blue;
+				text-align: center;
+				font-size: 3.2em;
+				font-weight: 400;
+				text-transform: uppercase;
+				letter-spacing: 12px;
+				margin: 10px 0px;
+			}
 
-				p {
-					font-size: 18px;
-					line-height: 30px;
-					text-align: left;
-					font-weight: 200;
-					padding: 0 20px 50px 16px;
+			p {
+				font-size: 1em;
+				line-height: 1.8em;
+				text-align: left;
+				font-weight: 500;
+				padding: 0;
+				margin: 20px 0 70px 0;
+
+				a {
+					color: $medium-blue;
+					border-bottom: 1px dotted $medium-blue;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		nav.carousel {
+			border-left: 10px solid $second-level-border;
+			background: transparent url('../images/paper-texture.png') repeat;
+			margin: 0 auto;
+
+			div.pagination-wrapper {
+				width: 300px;
+				margin: 0 auto;
+			}
+
+			ul {
+				float: left;
+				list-style: none;
+				padding: 15px 0;
+				margin: 0;
+
+				li {
+					float: left;
+					margin-right: 10px;
+					padding-bottom: 20px;
 
 					a {
-						color: $medium-blue;
-						border-bottom: 1px dotted $medium-blue;
+						display: block;
+						width: 65px;
+						height: 70px;
+						background: transparent url('../images/carousel-sprite.png') top left no-repeat;
+						background-size: cover;
+                		-moz-background-size: cover;  /* Firefox 3.6 */
+                		background-position: center;  
 
-						&:hover {
-							text-decoration: none;
+						span {
+							display: block;
+							padding-top: 76px;
+							text-align: center;
+						}
+					}
+
+					&.lauren {
+						a {
+							background-position: 0 0;
+						}
+
+						&.on {
+							a {
+								background-position: 0 -70px;	
+							}
+							
+						}
+					}
+
+					&.susan {
+						a {
+							background-position: 0 -140px;
+						}
+
+						&.on {
+							a {
+								background-position: 0 -210px;	
+							}
+							
+						}
+					}
+					&.aaron {
+						a {
+							background-position: 0 -286px;
+						}
+
+						&.on {
+							a {
+								background-position: 0 -350px;	
+							}
+							
+						}
+					}
+					&.kristie {
+						margin-right: 0;
+
+						a {
+							background-position: 0 -432px;
+						}
+
+						&.on {
+							a {
+								background-position: 0 -1022px;	
+							}
+							
 						}
 					}
 				}
+			}
 		}
 	}
 }
@@ -116,7 +204,7 @@ body {
 			margin: 0 auto;
 
 			nav#primary {
-				border-left: 10px solid $top-border;
+				border-left: 10px solid $first-level-border;
 				padding: 0 130px;
 
 				h1 {
@@ -138,8 +226,8 @@ body {
 
 			}
 			header {
-				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') left bottom no-repeat;
+				border-left: 10px solid $first-level-border;
+				background: transparent url('../images/header-bg.png') center bottom no-repeat;
 				
 				h2 {
 					color: $light-blue;
@@ -171,6 +259,94 @@ body {
 					}
 				}
 			}
+			nav.carousel {
+				border-left: 10px solid $second-level-border;
+				background: transparent url('../images/paper-texture.png') repeat;
+				margin: 0 auto;
+
+				div.pagination-wrapper {
+					width: 640px;
+					margin: 0 auto;
+				}
+
+				ul {
+					float: left;
+					list-style: none;
+					padding: 50px 0;
+					margin: 0;
+
+					li {
+						float: left;
+						margin-right: 40px;
+						padding-bottom: 20px;
+
+						a {
+							display: block;
+							width: 130px;
+							height: 140px;
+							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
+							
+							span {
+								display: block;
+								padding-top: 140px;
+								text-align: center;
+							}
+						}
+
+						&.lauren {
+							a {
+								background-position: 0 0;
+							}
+
+							&.on {
+								a {
+									background-position: 0 -146px;	
+								}
+								
+							}
+						}
+
+						&.susan {
+							a {
+								background-position: 0 -292px;
+							}
+
+							&.on {
+								a {
+									background-position: 0 -438px;	
+								}
+								
+							}
+						}
+						&.aaron {
+							a {
+								background-position: 0 -584px;
+							}
+
+							&.on {
+								a {
+									background-position: 0 -730px;	
+								}
+								
+							}
+						}
+						&.kristie {
+							margin-right: 0;
+
+							a {
+								background-position: 0 -876px;
+							}
+
+							&.on {
+								a {
+									background-position: 0 -1022px;	
+								}
+								
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -186,7 +362,7 @@ body {
 			padding: 0;
 
 			nav#primary {
-				border-left: 10px solid $top-border;
+				border-left: 10px solid $first-level-border;
 				padding: 0 130px;
 
 				h1 {
@@ -227,8 +403,8 @@ body {
 
 			}
 			header {
-				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') center bottom no-repeat;
+				border-left: 10px solid $first-level-border;
+				background: transparent url('../images/header-bg.png') top left no-repeat;
 				
 				h2 {
 					color: $light-blue;
@@ -274,12 +450,11 @@ body {
 			padding: 0;
 
 			nav#primary {
-				border-left: 10px solid $top-border;
+				border-left: 10px solid $first-level-border;
 
 			}
 			header {
-				border-left: 10px solid $top-border;
-				background: transparent url('../images/header-bg.png') center bottom no-repeat;
+				border-left: 10px solid $first-level-border;
 			}
 		}
 	}
