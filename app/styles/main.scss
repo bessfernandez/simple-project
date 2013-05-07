@@ -100,7 +100,6 @@ body {
 		}
 		nav.carousel {
 			border-left: 15px solid $second-level-border;
-			background: transparent url('../images/paper-texture.png') repeat;
 			margin: 0 auto;
 
 			div.pagination-wrapper {
@@ -224,6 +223,7 @@ body {
 			}
 			header {
 				background-position: top left;
+				padding-bottom: 5px;
 				
 				h2 {
 					font-size: 170px;
@@ -238,7 +238,7 @@ body {
 					text-align: left;
 					font-size: 37px;
 					line-height: 55px;
-					padding: 0 128px 45px 128px;
+					padding: 0 128px 0px 128px;
 
 					a {
 
@@ -250,13 +250,54 @@ body {
 			}
 			nav.carousel {
 				border-left: 15px solid $second-level-border;
-				background: transparent url('../images/paper-texture.png') repeat;
 				margin: 0 auto;
 
 				div.pagination-wrapper {
+					display: none;
 					width: 640px;
 					margin: 0 auto;
 				}
+
+				div.carousel {
+					margin: 0;
+					padding: 0;
+					min-height: 400px;
+
+					div.carousel-head {
+						background: transparent url('../images/paper-texture.png') repeat;	
+						height: 227px;
+
+
+						ol.carousel-indicators {
+							width: 100%;
+							top: 0;
+							left: 20%;
+							margin: 40px 0;
+						
+
+							li {
+								width: 130px;
+								height: 140px;
+								margin-right: 40px;
+								cursor: pointer;
+								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
+
+								&.active {
+									background-position: 0 -147px;	
+								}
+							}
+						}
+
+
+					}
+
+					
+					div.carousel-inner {
+						min-height: 400px;
+					}
+				}
+
+				
 
 				ul {
 					float: left;
