@@ -17,6 +17,8 @@ require.config({
 
 require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
     'use strict';
+
+  
     // use app here
     // console.log(app);
     // console.log('Running jQuery %s', $().jquery);

@@ -281,12 +281,46 @@ body {
 								cursor: pointer;
 								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
 								
+								
+
+								.indicator-arrow {
+									position: relative;
+									width: 100px;
+									height: 100px;
+									margin-top: -10px;
+									background: #45b6ca;
+								}
+								&.active {
+										&:after {
+										bottom:-34%;
+										border: solid transparent;
+										content: " ";
+										height: 0;
+										width: 0;
+										position: absolute;
+										pointer-events: none;
+									}
+
+									&:after {
+										border-color: rgba(69, 182, 202, 0);
+										border-bottom-color: #45b6ca;
+										border-width: 10px;
+										left: 5%;
+										margin-left: -10px;
+									}
+								}
+
 								&.lauren {
 									background-position: 0 0;
 
 									&.active {
 										background-position: 0 -147px;
+
+										&:after {
+											left: 5%;
+										}
 									}
+
 								}
 
 								&.susan {
@@ -294,13 +328,21 @@ body {
 
 									&.active {
 										background-position: 0 -437px;
+
+										&:after {
+											left: 20%;
+										}
 									}
 								}
 								&.aaron {
 									background-position: 0 -582px;
 
 									&.active {
-										background-position: 0 -729px;	
+										background-position: 0 -729px;
+
+										&:after {
+											left: 35%;
+										}	
 									}
 								}
 								&.kristie {
@@ -310,6 +352,9 @@ body {
 									&.active {
 										background-position: 0 -1020px;
 										
+										&:after {
+											left: 50%;
+										}
 									}
 								}
 							}
@@ -320,7 +365,7 @@ body {
 
 					
 					div.carousel-inner {
-						min-height: 400px;
+						position: relative;
 						background-color: $panel-background;
 						color: #fff;
 
@@ -328,23 +373,44 @@ body {
 							color: #666;
 							font-size: 2.8em;
 							font-weight: 400;
+							margin-top: 0;
 							padding-top: 40px;
 						}
 
 						.item {
-							width: 70%;
-							padding-left: 20%;
+							float: left;
+							width: 100%;
+							padding-left: 10%;
 							font-size: 1.1em;
+							background: transparent url('../images/bg-lauren.png') no-repeat 80% 0;
 
 							em {
-								font-size: 1.8em;
+								font-size: 1.6em;
 								font-style: normal;
+								font-weight: 500;
 							}
 
 							ul {
+								font-size: 1em;
+								padding: 20px 0 51px;
+								
 								li {
-									margin-bottom: 16px;
+									width: 56%;
+									line-height: 1.4em;
+									font-weight: 300;
+									margin-bottom: 15px;
+									padding-bottom: 0;
 								}
+							}
+
+							&.susan {
+								background-image: url('../images/bg-susan.png');
+							}
+							&.aaron {
+								background-image: url('../images/bg-aaron.png');
+							}
+							&.kristie {
+								background-image: url('../images/bg-kristie.png');
 							}
 						}
 					}
