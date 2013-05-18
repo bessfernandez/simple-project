@@ -100,6 +100,7 @@ body {
 			}
 		}
 		nav.carousel {
+			overflow: hidden;
 			border-left: 15px solid $second-level-border;
 			margin: 0 auto;
 
@@ -109,13 +110,11 @@ body {
 			}
 
 			ul {
-				float: left;
 				list-style: none;
 				padding: 15px 0;
 				margin: 0;
 
 				li {
-					float: left;
 					margin-right: 10px;
 					padding-bottom: 20px;
 
@@ -140,7 +139,7 @@ body {
 
 						&.active {
 							a {
-								background-position: 0 -148px;	
+								background-position: 0 -149px;	
 							}
 							
 						}
@@ -185,6 +184,30 @@ body {
 						}
 					}
 				}
+			}
+		}
+		aside {
+			border-left: 15px solid $second-level-border;
+			background: transparent url('../images/paper-texture.png') repeat;
+
+			p {
+				text-align: center;
+				padding: 15px 0;
+				margin: 0 17%;
+				font-size: 1.3em;
+				line-height: 1.3em;
+			}
+		}
+		section#join-us {
+			border-left: 15px solid $third-level-border;
+			background: transparent url('../images/blue-hatch.gif') repeat top left;
+
+			padding: 60px 0;
+
+			div.inner {
+				background: transparent url('../images/join-icon.png') no-repeat 120px 0;
+				color: #666;
+				padding: 0 120px 0 360px;
 			}
 		}
 	}
@@ -237,7 +260,8 @@ body {
 					text-align: left;
 					font-size: 37px;
 					line-height: 55px;
-					padding: 0 128px 0px 128px;
+					padding: 0 8%;
+					margin-bottom: 10.8%;
 
 					a {
 
@@ -248,6 +272,7 @@ body {
 				}
 			}
 			nav.carousel {
+				overflow: hidden;
 				border-left: 15px solid $second-level-border;
 				margin: 0 auto;
 
@@ -264,7 +289,7 @@ body {
 
 					div.carousel-head {
 						background: transparent url('../images/paper-texture.png') repeat;	
-						height: 227px;
+						height: 240px;
 
 
 						ol.carousel-indicators {
@@ -275,24 +300,24 @@ body {
 						
 
 							li {
+								position: relative;
+								text-indent: 0;
 								width: 130px;
 								height: 140px;
 								margin-right: 40px;
 								cursor: pointer;
 								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
 								
-								
-
-								.indicator-arrow {
-									position: relative;
-									width: 100px;
-									height: 100px;
-									margin-top: -10px;
-									background: #45b6ca;
+								span {
+									display: block;
+									text-align: center;
+									font-size: 1.6em;
+									margin-top: 150px;
 								}
+
 								&.active {
 										&:after {
-										bottom:-34%;
+										bottom:-43%;
 										border: solid transparent;
 										content: " ";
 										height: 0;
@@ -306,7 +331,7 @@ body {
 										border-bottom-color: #45b6ca;
 										border-width: 10px;
 										left: 5%;
-										margin-left: -10px;
+										margin-left: 53px;
 									}
 								}
 
@@ -317,7 +342,7 @@ body {
 										background-position: 0 -147px;
 
 										&:after {
-											left: 5%;
+											left: 0%;
 										}
 									}
 
@@ -330,7 +355,7 @@ body {
 										background-position: 0 -437px;
 
 										&:after {
-											left: 20%;
+											left: 0%;
 										}
 									}
 								}
@@ -341,7 +366,7 @@ body {
 										background-position: 0 -729px;
 
 										&:after {
-											left: 35%;
+											left: 2%;
 										}	
 									}
 								}
@@ -353,7 +378,7 @@ body {
 										background-position: 0 -1020px;
 										
 										&:after {
-											left: 50%;
+											left: 1%;
 										}
 									}
 								}
@@ -432,8 +457,6 @@ body {
 						}
 					}
 				}
-
-				
 
 				ul {
 					float: left;
