@@ -47,7 +47,7 @@ body {
 					color: $medium-grey;
 					float: left;
 					margin: 0;
-					padding: 5px 0;
+					padding: 2% 0%;
 					font-size: .95em;
 					font-weight: 400;
 
@@ -60,16 +60,18 @@ body {
 				ul {
 					float: right;
 					font-size: .8em;
-					font-weight: 400;
-					margin: 15px 0 0 0;
+					font-weight: 300;
+					margin: 0;
+					padding-top: 4.5%;
 					list-style: none;
 
 					li {
 						float: left;
-						margin: 0 0 0 11px;
+						margin-left: 20px;
 
 						a {
 							color: $medium-grey;
+							border-bottom: none;
 						}
 					}
 				}
@@ -204,8 +206,8 @@ body {
 			p {
 				text-align: center;
 				padding: 15px 0;
-				margin: 0 17%;
-				font-size: 1.3em;
+				margin: 0 2%;
+				font-size: 1.2em;
 				line-height: 1.3em;
 			}
 		}
@@ -232,7 +234,8 @@ body {
 				p {
 					font-size: 1.5em;
 					line-height: 1.5em;
-					margin: 35px 0;
+					padding: 0 8%;
+					margin-bottom: 8.7%;
 				}
 
 				form {
@@ -254,10 +257,20 @@ body {
 						border: none;
 					}
 				}
-				footer {
-					padding: 20px 0;
-					margin-bottom: 100px;
-					border-left: 15px solid $third-level-border;
+			}
+		}
+
+		footer {
+			padding: 30px 9%;
+			margin-bottom: 100px;
+			border-left: 15px solid $third-level-border;
+
+			p {
+				font-size: 1.2em;
+				font-weight: 200;
+
+				a {
+					margin-left: 25px;
 				}
 			}
 		}
@@ -275,47 +288,42 @@ body {
 			margin: 0 auto;
 
 			nav#primary {
-				padding: 0 130px;
+				background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
 				h1 {
-					padding: 15px 0;
-					font-size: 32px;
-					line-height: 28px;
+					padding: 1.7% 8%;
+					font-size: 2em;
 					font-weight: 400;
 				}
 
 				ul {
-					margin-top: 20px;
-					font-size: 18px;
+					margin: 2.5% 8% 0 0;
+					padding: 0;
+					font-size: 1.1em;
 
 					li {
-						margin-left: 60px;
+						padding-left: 60px;
 					}
 				}
 
 			}
 			header {
 				background-position: top left;
-				padding-bottom: 5px;
 				
 				h2 {
 					font-size: 170px;
 					line-height: 40.29px;
 					font-weight: 200;
-					margin: 80px 60px 100px 60px;
+					margin: 90px 60px 9% 60px;
 				}
 
 				p {
-					font-size: 2em;
-					line-height: 1.3em;
-					text-align: left;
-					font-size: 37px;
-					line-height: 55px;
+					font-size: 2.2em;
+					line-height: 1.6em;
 					padding: 0 8%;
-					margin-bottom: 10.8%;
+					margin-bottom: 8%;
 
 					a {
-
 						&:hover {
 							text-decoration: none;
 						}
@@ -587,6 +595,18 @@ body {
 					}
 				}
 			}
+			aside {
+			border-left: 15px solid $second-level-border;
+			background: transparent url('../images/paper-texture.png') repeat;
+
+			p {
+				text-align: center;
+				padding: 15px 0;
+				margin: 0 17%;
+				font-size: .95em;
+				line-height: 1em;
+			}
+		}
 		}
 	}
 
@@ -594,90 +614,27 @@ body {
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
+	
+	header {
+		
+		h2 {
+		}
 
-	body {
-		padding: 0;
+		p {
+			border: 1px solid red;
+			font-size: 2.2em;
+			line-height: 1.6em;
+			padding: 0 8%;
+			margin-bottom: 8%;
 
-		.container-fluid {
-			padding: 0;
-
-			nav#primary {
-				border-left: 10px solid $first-level-border;
-				padding: 0 130px;
-
-				h1 {
-					float: left;
-					margin: 0;
-					padding: 15px 0;
-					font-size: 22px;
-					line-height: 18px;
-					font-weight: 400;
-					font-family: 'Raleway', sans-serif;
-					font-style: normal;
-					color: $medium-grey;
-
-					em {
-						color: $light-blue;
-						font-style: normal;
-					}
-				}
-
-				ul {
-					float: right;
-					margin-top: 16px;
-					font-size: 18px;
-					line-height: 28px;
-					font-weight: 200;
-					margin-bottom: 0;
-					list-style: none;
-
-					li {
-						float: left;
-						margin-left: 65px;
-
-						a {
-							color: $medium-grey;
-						}
-					}
-				}
-
-			}
-			header {
-				border-left: 10px solid $first-level-border;
-				background: transparent url('../images/header-bg.png') top left no-repeat;
-				
-				h2 {
-					color: $light-blue;
-					text-align: center;
-					font-size: 150px;
-					line-height: 20.29px;
-					font-weight: 200;
-					text-transform: uppercase;
-					letter-spacing: 12px;
-					margin: 80px 60px 100px 60px;
-				}
-
-				p {
-					font-size: 20px;
-					line-height: 1.3em;
-					text-align: left;
-					font-weight: 200;
-					font-size: 37px;
-					line-height: 55px;
-					padding: 0 128px 110px 128px;
-
-					a {
-						color: $medium-blue;
-						border-bottom: 1px dotted $medium-blue;
-
-						&:hover {
-							text-decoration: none;
-						}
-					}
+			a {
+				&:hover {
+					text-decoration: none;
 				}
 			}
 		}
 	}
+
 
 }
  
