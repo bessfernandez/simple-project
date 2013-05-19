@@ -122,211 +122,37 @@ body {
 				margin: 0 auto;
 			}
 
-			div.carousel {
-					margin: 0;
-					padding: 0;
-					min-height: 400px;
-
-				div.carousel-head {
-					background: transparent url('../images/paper-texture.png') repeat;	
-					height: 240px;
-
-
-					ol.carousel-indicators {
-						width: 100%;
-						top: 0;
-						left: 20%;
-						margin: 40px 0;
-					
-
-						li {
-							position: relative;
-							text-indent: 0;
-							width: 130px;
-							height: 140px;
-							margin-right: 40px;
-							cursor: pointer;
-							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-							
-							span {
-								display: block;
-								text-align: center;
-								font-size: 1.6em;
-								margin-top: 150px;
-							}
-
-							&.active {
-									&:after {
-									bottom:-43%;
-									border: solid transparent;
-									content: " ";
-									height: 0;
-									width: 0;
-									position: absolute;
-									pointer-events: none;
-								}
-
-								&:after {
-									border-color: rgba(69, 182, 202, 0);
-									border-bottom-color: #45b6ca;
-									border-width: 10px;
-									left: 5%;
-									margin-left: 53px;
-								}
-							}
-
-							&.lauren {
-								background-position: 0 0;
-
-								&.active {
-									background-position: 0 -147px;
-
-									&:after {
-										left: 0%;
-									}
-								}
-
-							}
-
-							&.susan {
-								background-position: 0 -290px;
-
-								&.active {
-									background-position: 0 -437px;
-
-									&:after {
-										left: 0%;
-									}
-								}
-							}
-							&.aaron {
-								background-position: 0 -582px;
-
-								&.active {
-									background-position: 0 -729px;
-
-									&:after {
-										left: 2%;
-									}	
-								}
-							}
-							&.kristie {
-								margin-right: 0;
-								background-position: 0 -873px;
-
-								&.active {
-									background-position: 0 -1020px;
-									
-									&:after {
-										left: 1%;
-									}
-								}
-							}
-						}
-					}
-				}
-				div.carousel-inner {
-					position: relative;
-					background-color: $panel-background;
-					color: #fff;
-
-					h3 {
-						color: #666;
-						font-size: 250%;
-						font-weight: 400;
-						margin-top: 0;
-						padding-top: 40px;
-					}
-
-					.item {
-						float: left;
-						width: 100%;
-						padding-left: 10%;
-						font-size: 110%;
-						min-height: 400px;
-						background: transparent url('../images/bg-lauren.png') no-repeat 80% 0;
-
-						em {
-							font-size: 160%;
-							font-style: normal;
-							font-weight: 500;
-						}
-
-						ul {
-							font-size: 1em;
-							padding: 20px 0 0 0;
-							
-							li {
-								width: 56%;
-								line-height: 1.4em;
-								font-weight: 300;
-								margin-bottom: 15px;
-								padding-bottom: 0;
-							}
-						}
-
-						&.susan {
-							background-image: url('../images/bg-susan.png');
-						}
-						&.aaron {
-							background-image: url('../images/bg-aaron.png');
-						}
-						&.kristie {
-							background-image: url('../images/bg-kristie.png');
-						}
-					}
-				}
-
-				.carousel-control {
-					top: 65%;
-					background: transparent;
-					border: none;
-					font-size: 280px;
-					opacity: .50%;
-					width: 100px;
-					height: 100px;
-
-					&.left {
-						left: 0;
-					}
-					&.right {
-						right: 0;
-					}
-				}
-			}
-
 			ul {
-				float: left;
 				list-style: none;
-				padding: 50px 0;
+				padding: 15px 0;
 				margin: 0;
 
 				li {
-					float: left;
-					margin-right: 40px;
+					margin-right: 10px;
 					padding-bottom: 20px;
 
 					a {
 						display: block;
-						width: 130px;
-						height: 140px;
+						width: 65px;
+						height: 70px;
 						background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-						
+						background-size: cover;
+                		-moz-background-size: cover;  /* Firefox 3.6 */
+                		background-position: center;  
+
 						span {
 							display: block;
-							padding-top: 140px;
+							padding-top: 76px;
 							text-align: center;
 						}
 					}
 
 					&.lauren {
-						a {
-							background-position: 0 0;
-						}
+						background-position: 0 0;
 
-						&.on {
+						&.active {
 							a {
-								background-position: 0 -146px;	
+								background-position: 0 -149px;	
 							}
 							
 						}
@@ -334,24 +160,24 @@ body {
 
 					&.susan {
 						a {
-							background-position: 0 -292px;
+							background-position: 0 -140px;
 						}
 
 						&.on {
 							a {
-								background-position: 0 -438px;	
+								background-position: 0 -210px;	
 							}
 							
 						}
 					}
 					&.aaron {
 						a {
-							background-position: 0 -584px;
+							background-position: 0 -286px;
 						}
 
 						&.on {
 							a {
-								background-position: 0 -730px;	
+								background-position: 0 -350px;	
 							}
 							
 						}
@@ -360,7 +186,7 @@ body {
 						margin-right: 0;
 
 						a {
-							background-position: 0 -876px;
+							background-position: 0 -432px;
 						}
 
 						&.on {
@@ -612,7 +438,11 @@ body {
 								}
 							}
 						}
+
+
 					}
+
+					
 					div.carousel-inner {
 						position: relative;
 						background-color: $panel-background;
@@ -849,7 +679,7 @@ body {
 
 						ol.carousel-indicators {
 							width: 100%;
-							left: 5%;
+							left: 12%;
 							margin: 40px 0;
 						
 
@@ -858,7 +688,7 @@ body {
 								text-indent: 0;
 								width: 130px;
 								height: 140px;
-								margin-right: 40px;
+								margin-right: 20px;
 								cursor: pointer;
 								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
 								
@@ -1118,7 +948,7 @@ body {
 			}
 			footer {
 				p {
-					font-size: 110%;
+					font-size: 120%;
 				}
 			}
 
