@@ -122,81 +122,185 @@ body {
 				margin: 0 auto;
 			}
 
+			div.carousel {
+				margin: 0;
+				padding: 0;
+				min-height: 400px;
+
+				div.carousel-head {
+					background: transparent url('../images/paper-texture.png') repeat;	
+					height: 115px;
+
+					ol.carousel-indicators {
+						width: 100%;
+						top: 0;
+						left: 6%;
+						margin: 8px 0;
+					
+
+						li {
+							position: relative;
+							text-indent: 0;
+							width: 70px;
+							height: 80px;
+							margin-right: 10px;
+							cursor: pointer;
+							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
+							background-size: cover;
+	                		-moz-background-size: cover;  /* Firefox 3.6 */
+	                		background-position: center; 
+
+							span {
+								display: block;
+								text-align: center;
+								font-size: 1em;
+								margin-top: 74px;
+							}
+
+							&.active {
+									&:after {
+									bottom:-35%;
+									border: solid transparent;
+									content: " ";
+									height: 0;
+									width: 0;
+									position: absolute;
+									pointer-events: none;
+								}
+
+								&:after {
+									border-color: rgba(69, 182, 202, 0);
+									border-bottom-color: #45b6ca;
+									border-width: 10px;
+									left:-45%;
+									margin-left: 53px;
+								}
+							}
+
+							&.lauren {
+								background-position: 0 2px;
+
+								&.active {
+									background-position: 0 -77px;
+
+									&:after {
+										left: -40%;
+									}
+								}
+
+							}
+
+							&.susan {
+								background-position: 0 -155px;
+
+								&.active {
+									background-position: 0 -234px;
+
+									&:after {
+										left: -40%;
+									}
+								}
+							}
+							&.aaron {
+								background-position: 0 -310px;
+
+								&.active {
+									background-position: 0 -389px;
+
+									&:after {
+										left: -40%;
+									}	
+								}
+							}
+							&.kristie {
+								margin-right: 0;
+								background-position: 0 -469px;
+
+								&.active {
+									background-position: 0 -548px;
+									
+									&:after {
+										left: -40%;
+									}
+								}
+							}
+						}
+					}
+				}
+				div.carousel-inner {
+					position: relative;
+					background-color: $panel-background;
+					color: #fff;
+
+					h3 {
+						color: #333;
+						font-size: 210%;
+						font-weight: 500;
+						margin-top: 0;
+						padding-top: 20px;
+					}
+
+					.item {
+						float: left;
+						width: 100%;
+						padding-left: 23%;
+						font-size: 80%;
+						min-height: 350px;
+						background: transparent url('../images/bg-lauren.png') no-repeat 0 0;
+
+						em {
+							font-size: 160%;
+							font-style: normal;
+							font-weight: 500;
+						}
+
+						ul {
+							font-size: 1.1em;
+							padding: 0;
+							
+							li {
+								width: 56%;
+								line-height: 1.4em;
+								font-weight: 300;
+								margin-bottom: 15px;
+								padding-bottom: 0;
+							}
+						}
+
+						&.susan {
+							background-image: url('../images/bg-susan.png');
+						}
+						&.aaron {
+							background-image: url('../images/bg-aaron.png');
+						}
+						&.kristie {
+							background-image: url('../images/bg-kristie.png');
+						}
+					}
+				}
+
+				.carousel-control {
+					top: 65%;
+					background: transparent;
+					border: none;
+					font-size: 750%;
+					opacity: .50%;
+					width: 100px;
+					height: 100px;
+
+					&.left {
+						left: 0;
+					}
+					&.right {
+						right: 0;
+					}
+				}
+			}
+			/* standard ul */
 			ul {
 				list-style: none;
 				padding: 15px 0;
 				margin: 0;
-
-				li {
-					margin-right: 10px;
-					padding-bottom: 20px;
-
-					a {
-						display: block;
-						width: 65px;
-						height: 70px;
-						background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-						background-size: cover;
-                		-moz-background-size: cover;  /* Firefox 3.6 */
-                		background-position: center;  
-
-						span {
-							display: block;
-							padding-top: 76px;
-							text-align: center;
-						}
-					}
-
-					&.lauren {
-						background-position: 0 0;
-
-						&.active {
-							a {
-								background-position: 0 -149px;	
-							}
-							
-						}
-					}
-
-					&.susan {
-						a {
-							background-position: 0 -140px;
-						}
-
-						&.on {
-							a {
-								background-position: 0 -210px;	
-							}
-							
-						}
-					}
-					&.aaron {
-						a {
-							background-position: 0 -286px;
-						}
-
-						&.on {
-							a {
-								background-position: 0 -350px;	
-							}
-							
-						}
-					}
-					&.kristie {
-						margin-right: 0;
-
-						a {
-							background-position: 0 -432px;
-						}
-
-						&.on {
-							a {
-								background-position: 0 -1022px;	
-							}
-							
-						}
-					}
-				}
 			}
 		}
 		aside {
@@ -214,15 +318,17 @@ body {
 		section#join-us {
 			border-left: 15px solid $third-level-border;
 			background: transparent url('../images/blue-hatch.gif') repeat top left;
-			padding: 60px 0 40px 0;
+			padding: 40px 0 40px 0;
 
 			div.inner {
-				background: transparent url('../images/join-icon.png') no-repeat 120px 0;
+				background: transparent url('../images/join-icon.png') no-repeat 50% 0;
 				color: #666;
-				padding: 0 125px 0 360px;
+				padding: 0 8%;
 
 				h3 {
+					font-size: 130%;
 					font-weight: normal;
+					padding-top: 230px;
 
 					em {
 						font-weight: bold;
@@ -231,7 +337,7 @@ body {
 				}
 
 				p {
-					font-size: 170%;
+					font-size: 120%;
 					line-height: 1.5em;
 					margin: 5% 0;
 				}
@@ -242,7 +348,7 @@ body {
 					input {
 						font-family: 'Raleway', sans-serif;
 						color: $medium-grey;
-						margin-bottom: 10px;
+						margin: 10px 0;
 						width: 300px;
 						padding: 10px;
 						font-size: 1.5em;
@@ -263,12 +369,11 @@ body {
 		}
 
 		footer {
-			padding: 30px 9%;
-			margin-bottom: 100px;
+			padding: 30px 8%;
 			border-left: 15px solid $third-level-border;
 
 			p {
-				font-size: 140%;
+				font-size: 100%;
 				font-weight: 200;
 
 				a {
@@ -438,11 +543,7 @@ body {
 								}
 							}
 						}
-
-
 					}
-
-					
 					div.carousel-inner {
 						position: relative;
 						background-color: $panel-background;
@@ -512,81 +613,53 @@ body {
 						}
 					}
 				}
+			}
+			section#join-us {
+				border-left: 15px solid $third-level-border;
+				background: transparent url('../images/blue-hatch.gif') repeat top left;
+				padding: 60px 0 40px 0;
 
-				ul {
-					float: left;
-					list-style: none;
-					padding: 50px 0;
-					margin: 0;
+				div.inner {
+					background: transparent url('../images/join-icon.png') no-repeat 120px 0;
+					color: #666;
+					padding: 0 125px 0 360px;
 
-					li {
-						float: left;
-						margin-right: 40px;
-						padding-bottom: 20px;
+					h3 {
+						font-weight: normal;
 
-						a {
-							display: block;
-							width: 130px;
-							height: 140px;
-							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-							
-							span {
-								display: block;
-								padding-top: 140px;
-								text-align: center;
-							}
+						em {
+							font-weight: bold;
+							font-style: normal;
 						}
+					}
 
-						&.lauren {
-							a {
-								background-position: 0 0;
-							}
+					p {
+						font-size: 170%;
+						line-height: 1.5em;
+						margin: 5% 0;
+					}
 
-							&.on {
-								a {
-									background-position: 0 -146px;	
-								}
-								
-							}
+					form {
+						font-family: 'Raleway', sans-serif;
+
+						input {
+							font-family: 'Raleway', sans-serif;
+							color: $medium-grey;
+							margin-bottom: 10px;
+							width: 300px;
+							padding: 10px;
+							font-size: 1.5em;
+							line-height: 1.5em;
 						}
-
-						&.susan {
-							a {
-								background-position: 0 -292px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -438px;	
-								}
-								
-							}
-						}
-						&.aaron {
-							a {
-								background-position: 0 -584px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -730px;	
-								}
-								
-							}
-						}
-						&.kristie {
-							margin-right: 0;
-
-							a {
-								background-position: 0 -876px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -1022px;	
-								}
-								
-							}
+						.btn {
+							color: #fff;
+							height: 40px;
+							font-weight: 100;
+							font-size: 1.5em;
+							padding: 0 45px;
+							background-color: #45b6ca;
+							background-image: none;
+							border: none;
 						}
 					}
 				}
@@ -603,7 +676,13 @@ body {
 					line-height: 1.5em;
 				}
 			}
+			footer {
+				p {
+					font-size: 140%;
+				}
+			}
 		}
+		
 	}
 
 }
@@ -840,87 +919,11 @@ body {
 						}
 					}
 				}
-
-				ul {
-					float: left;
-					list-style: none;
-					padding: 50px 0;
-					margin: 0;
-
-					li {
-						float: left;
-						margin-right: 40px;
-						padding-bottom: 20px;
-
-						a {
-							display: block;
-							width: 130px;
-							height: 140px;
-							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-							
-							span {
-								display: block;
-								padding-top: 140px;
-								text-align: center;
-							}
-						}
-
-						&.lauren {
-							a {
-								background-position: 0 0;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -146px;	
-								}
-								
-							}
-						}
-
-						&.susan {
-							a {
-								background-position: 0 -292px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -438px;	
-								}
-								
-							}
-						}
-						&.aaron {
-							a {
-								background-position: 0 -584px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -730px;	
-								}
-								
-							}
-						}
-						&.kristie {
-							margin-right: 0;
-
-							a {
-								background-position: 0 -876px;
-							}
-
-							&.on {
-								a {
-									background-position: 0 -1022px;	
-								}
-								
-							}
-						}
-					}
-				}
 			}
+
 			section#join-us {
 				div.inner {
+					background-position: 120px 0;
 
 					h3 {
 						font-size: 140%;	
