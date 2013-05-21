@@ -133,26 +133,23 @@ body {
 
 				div.carousel-head {
 					background: transparent url('../images/paper-texture.png') repeat;	
-					height: 115px;
+					
+					padding: 20% 0;
 
 					ol.carousel-indicators {
 						width: 100%;
 						top: 0;
 						left: 0%;
-						margin: 8px 0;
-					
+						margin: 8% 0;
 
 						li {
-							position: relative;
-							text-indent: 0;
-							width: 70px;
-							height: 80px;
-							margin-right: 0px;
-							cursor: pointer;
-							background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-							background-size: cover;
-	                		-moz-background-size: cover;  /* Firefox 3.6 */
-	                		background-position: center; 
+							width: 20%;
+							height: 0;
+							padding-bottom: 20%;
+							background: transparent url('../images/carousel-sprite.png') 0 0 no-repeat;
+							background-size: 100%;
+							margin-right: 4%;
+							display:block;
 
 							span {
 								display: block;
@@ -182,10 +179,10 @@ body {
 							}
 
 							&.lauren {
-								background-position: 0 2px;
+								background-position: 0 0;
 
 								&.active {
-									background-position: 0 -77px;
+									background-position: 0 14%;
 
 									&:after {
 										left: -40%;
@@ -195,10 +192,10 @@ body {
 							}
 
 							&.susan {
-								background-position: 0 -155px;
+								background-position: 0 28%;
 
 								&.active {
-									background-position: 0 -234px;
+									background-position: 0 42%;
 
 									&:after {
 										left: -40%;
@@ -206,10 +203,10 @@ body {
 								}
 							}
 							&.aaron {
-								background-position: 0 -310px;
+								background-position: 0 56%;
 
 								&.active {
-									background-position: 0 -389px;
+									background-position: 0 70%;
 
 									&:after {
 										left: -40%;
@@ -218,10 +215,10 @@ body {
 							}
 							&.kristie {
 								margin-right: 0;
-								background-position: 0 -469px;
+								background-position: 0 84%;
 
 								&.active {
-									background-position: 0 -548px;
+									background-position: 0 98%;
 									
 									&:after {
 										left: -40%;
@@ -457,26 +454,10 @@ body {
 
 
 						ol.carousel-indicators {
-							width: 100%;
-							top: 0;
-							left: 20%;
-							margin: 40px 0;
 						
 
 							li {
-								position: relative;
-								text-indent: 0;
-								width: 130px;
-								height: 140px;
-								margin-right: 40px;
-								cursor: pointer;
-								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
-								
 								span {
-									display: block;
-									text-align: center;
-									font-size: 1.6em;
-									margin-top: 150px;
 								}
 
 								&.active {
@@ -498,7 +479,8 @@ body {
 										margin-left: 53px;
 									}
 								}
-
+								
+								/*
 								&.lauren {
 									background-position: 0 0;
 
@@ -546,7 +528,9 @@ body {
 										}
 									}
 								}
+								*/
 							}
+
 						}
 					}
 					div.carousel-inner {
@@ -765,25 +749,10 @@ body {
 
 
 						ol.carousel-indicators {
-							width: 100%;
-							left: 12%;
-							margin: 40px 0;
-						
 
 							li {
-								position: relative;
-								text-indent: 0;
-								width: 130px;
-								height: 140px;
-								margin-right: 20px;
-								cursor: pointer;
-								background: transparent url('../images/carousel-sprite.png') top left no-repeat;
 								
 								span {
-									display: block;
-									text-align: center;
-									font-size: 1.3em;
-									margin-top: 150px;
 								}
 
 								&.active {
@@ -805,7 +774,7 @@ body {
 										margin-left: 53px;
 									}
 								}
-
+								/*
 								&.lauren {
 									background-position: 0 0;
 
@@ -853,6 +822,7 @@ body {
 										}
 									}
 								}
+								*/
 							}
 						}
 					}
