@@ -143,6 +143,7 @@ body {
 						margin: 8% 0;
 
 						li {
+							position: relative;
 							width: 20%;
 							height: 0;
 							padding-bottom: 20%;
@@ -154,8 +155,8 @@ body {
 							span {
 								display: block;
 								text-align: center;
+								padding-top: 120%;
 								font-size: 1em;
-								margin-top: 74px;
 							}
 
 							&.active {
@@ -419,13 +420,19 @@ body {
 				min-height: 620px;
 				
 				h2 {
+					display: none;
 					font-size: 1020%;
 					line-height: 40.29px;
 					font-weight: 200;
 					margin: 90px 60px 9% 60px;
+
+					span.header-letter {
+						display: none;
+					}
 				}
 
 				p {
+					display: none;
 					font-size: 220%;
 					line-height: 1.6em;
 					padding: 0 8%;

@@ -32,23 +32,34 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
          $('html,body').animate({scrollTop:dest + -50}, 500,'swing');
      });
 
-   $('header h2, header p, header a').hide();
+
+    var headerLetters = $('h2').html().replace(/(\w)/g, "<span class='header-letter'>$&</span>")
+    var headerEls = $(headerLetters)
+    $('header h2').html(headerEls);
+    
+    // shuffle header els for randomization
+    var shuffle = _.shuffle(headerEls);
+
+    var loadedIndex = 0;
+    $('header h2').show();
+
+    //loadContent(); //Initiate it once on page load...
+    var loader = window.setInterval(loadContent, 400); 
    
 
+    function loadContent(timer) {
+       
+        $(shuffle[loadedIndex]).fadeIn();
+        
+        loadedIndex++; //Increase the array counter.
 
-    $('header h2').fadeTo('slow', 1, function() {
-      $("header p").fadeTo('slow', .6);
-      $("header a").fadeTo('slow', .8, function() {
-        $("header p").fadeTo('slow', 1);
-      });
-    });
+        if (shuffle.length == loadedIndex) { //If reached the end of the array...
+            
+            loadedIndex = 0; //Reset the counter
+            clearInterval(loader); // clear the interval
+        }
+    }
 
-      
-    
-    
-
-
-    
   
     // use app here
     // console.log(app);
