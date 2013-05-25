@@ -133,14 +133,14 @@ body {
 
 				div.carousel-head {
 					background: transparent url('../images/paper-texture.png') repeat;	
-					
-					padding: 20% 0 15% 0;
+					min-height: 20%;
+					padding: 20% 0 20% 0;
 
 					ol.carousel-indicators {
 						width: 100%;
 						top: 0;
 						left: 0%;
-						margin: 8% 0;
+						padding: 7% 0 0 0;
 
 						li {
 							position: relative;
@@ -150,18 +150,24 @@ body {
 							background: transparent url('../images/carousel-sprite.png') 0 0 no-repeat;
 							background-size: 100%;
 							margin-right: 4%;
-							display:block;
+							display: block;
+							
+							a {
+								text-indent: 0px;
 
-							span {
-								display: block;
-								text-align: center;
-								padding-top: 120%;
-								font-size: 1em;
+								span {
+									display: block;
+									text-align: center;
+									padding-top: 110%;
+									font-size: 100%;
+									color: #666;
+								}
+
 							}
 
 							&.active {
 								&:after {
-									bottom:-35%;
+									bottom:-66%;
 									border: solid transparent;
 									content: " ";
 									height: 0;
@@ -174,8 +180,8 @@ body {
 									border-color: rgba(69, 182, 202, 0);
 									border-bottom-color: #45b6ca;
 									border-width: 10px;
-									left:-45%;
-									margin-left: 53px;
+									left:0%;
+									margin-left: 30%;
 								}
 							}
 
@@ -186,7 +192,7 @@ body {
 									background-position: 0 14%;
 
 									&:after {
-										left: -35%;
+										left: 0%;
 									}
 								}
 
@@ -199,7 +205,7 @@ body {
 									background-position: 0 42%;
 
 									&:after {
-										left: -35%;
+										left: 0%;
 									}
 								}
 							}
@@ -210,7 +216,7 @@ body {
 									background-position: 0 70%;
 
 									&:after {
-										left: -35%;
+										left: 0%;
 									}	
 								}
 							}
@@ -222,7 +228,7 @@ body {
 									background-position: 0 98%;
 									
 									&:after {
-										left: -35%;
+										left: 0%;
 									}
 								}
 							}
@@ -440,110 +446,44 @@ body {
 				}
 			}
 			nav.carousel {
-				overflow: hidden;
-				border-left: 15px solid $second-level-border;
-				margin: 0 auto;
-
-				div.pagination-wrapper {
-					display: none;
-					width: 640px;
-					margin: 0 auto;
-				}
 
 				div.carousel {
-					margin: 0;
-					padding: 0;
-					min-height: 400px;
 
 					div.carousel-head {
-						background: transparent url('../images/paper-texture.png') repeat;	
-						height: 240px;
-
+						padding: 10% 0 10% 0;
 
 						ol.carousel-indicators {
-						
+							padding: 3% 0 0 22%;
 
 							li {
-								span {
+								width: 11%;
+								padding-bottom: 11%;
+								margin-right: 2.4%;
+								
+								a {
+									span {
+										font-size: 140%;
+									}
 								}
-
+								
 								&.active {
 										&:after {
-										bottom:-43%;
-										border: solid transparent;
-										content: " ";
-										height: 0;
-										width: 0;
-										position: absolute;
-										pointer-events: none;
+										bottom:-54%;
 									}
 
 									&:after {
 										border-color: rgba(69, 182, 202, 0);
 										border-bottom-color: #45b6ca;
 										border-width: 10px;
-										left: 5%;
-										margin-left: 53px;
+										left:0%;
+										margin-left: 40%;
 									}
 								}
-								
-								/*
-								&.lauren {
-									background-position: 0 0;
-
-									&.active {
-										background-position: 0 -147px;
-
-										&:after {
-											left: 0%;
-										}
-									}
-
-								}
-
-								&.susan {
-									background-position: 0 -290px;
-
-									&.active {
-										background-position: 0 -437px;
-
-										&:after {
-											left: 0%;
-										}
-									}
-								}
-								&.aaron {
-									background-position: 0 -582px;
-
-									&.active {
-										background-position: 0 -729px;
-
-										&:after {
-											left: 2%;
-										}	
-									}
-								}
-								&.kristie {
-									margin-right: 0;
-									background-position: 0 -873px;
-
-									&.active {
-										background-position: 0 -1020px;
-										
-										&:after {
-											left: 1%;
-										}
-									}
-								}
-								*/
 							}
 
 						}
 					}
 					div.carousel-inner {
-						position: relative;
-						background-color: $panel-background;
-						color: #fff;
 
 						h3 {
 							color: #666;
@@ -559,7 +499,7 @@ body {
 							padding-left: 10%;
 							font-size: 110%;
 							min-height: 400px;
-							background: transparent url('../images/bg-lauren.png') no-repeat 80% 0;
+							background-position: 80% 0;
 
 							em {
 								font-size: 160%;
@@ -579,25 +519,13 @@ body {
 									padding-bottom: 0;
 								}
 							}
-
-							&.susan {
-								background-image: url('../images/bg-susan.png');
-							}
-							&.aaron {
-								background-image: url('../images/bg-aaron.png');
-							}
-							&.kristie {
-								background-image: url('../images/bg-kristie.png');
-							}
 						}
 					}
 
 					.carousel-control {
 						top: 65%;
-						background: transparent;
 						border: none;
 						font-size: 280px;
-						opacity: .50%;
 						width: 100px;
 						height: 100px;
 
@@ -611,12 +539,10 @@ body {
 				}
 			}
 			section#join-us {
-				border-left: 15px solid $third-level-border;
-				background: transparent url('../images/blue-hatch.gif') repeat top left;
 				padding: 60px 0 40px 0;
 
 				div.inner {
-					background: transparent url('../images/join-icon.png') no-repeat 120px 0;
+					background-position: 120px 0;
 					color: #666;
 					padding: 0 125px 0 360px;
 
@@ -639,11 +565,8 @@ body {
 					}
 
 					form {
-						font-family: 'Raleway', sans-serif;
 
 						input {
-							font-family: 'Raleway', sans-serif;
-							color: $medium-grey;
 							margin-bottom: 10px;
 							width: 300px;
 							padding: 10px;
@@ -651,24 +574,17 @@ body {
 							line-height: 1.5em;
 						}
 						.btn {
-							color: #fff;
 							height: 40px;
 							font-weight: 100;
 							font-size: 1.5em;
 							padding: 0 45px;
-							background-color: #45b6ca;
-							background-image: none;
-							border: none;
 						}
 					}
 				}
 			}
 			aside {
-				border-left: 15px solid $second-level-border;
-				background: transparent url('../images/paper-texture.png') repeat;
 
 				p {
-					text-align: center;
 					padding: 15px 0;
 					margin: 0 17%;
 					font-size: 125%;
@@ -681,24 +597,20 @@ body {
 				}
 			}
 		}
-		
 	}
 
 }
 
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
-	
 	body {
 		.container-fluid {
-			max-width: 1200px;
-			margin: 0 auto;
 
 			nav#primary {
 				background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
 				h1 {
-					padding: 1.7% 0 1.7% 8%;
+					padding: 1.7% 8%;
 					font-size: 190%;
 					font-weight: 400;
 				}
@@ -710,139 +622,76 @@ body {
 
 					li {
 						padding-left: 60px;
-
-						&:first-child {
-							padding-left: 0;
-						}
 					}
 				}
 
 			}
 			header {
+				min-height: 620px;
 				
 				h2 {
-					font-size: 900%;
+					display: none;
+					font-size: 1020%;
 					line-height: 40.29px;
 					font-weight: 200;
-					margin: 60px 60px 9% 60px;
+					margin: 90px 60px 9% 60px;
+
+					span.header-letter {
+						display: none;
+					}
 				}
 
 				p {
-					font-size: 180%;
+					display: none;
+					font-size: 220%;
 					line-height: 1.6em;
 					padding: 0 8%;
 					margin-bottom: 8%;
 				}
 			}
 			nav.carousel {
-				overflow: hidden;
-				border-left: 15px solid $second-level-border;
-				margin: 0 auto;
-
-				div.pagination-wrapper {
-					display: none;
-					width: 640px;
-					margin: 0 auto;
-				}
 
 				div.carousel {
-					margin: 0;
-					padding: 0;
-					min-height: 400px;
 
 					div.carousel-head {
-						background: transparent url('../images/paper-texture.png') repeat;	
-						height: 240px;
-
+						padding: 10% 0 10% 0;
 
 						ol.carousel-indicators {
+							padding: 3% 0 0 22%;
 
 							li {
+								width: 11%;
+								padding-bottom: 11%;
+								margin-right: 2.4%;
 								
-								span {
+								a {
+									span {
+										font-size: 140%;
+									}
 								}
-
+								
 								&.active {
 										&:after {
-										bottom:-43%;
-										border: solid transparent;
-										content: " ";
-										height: 0;
-										width: 0;
-										position: absolute;
-										pointer-events: none;
+										bottom:-54%;
 									}
 
 									&:after {
 										border-color: rgba(69, 182, 202, 0);
 										border-bottom-color: #45b6ca;
 										border-width: 10px;
-										left: 5%;
-										margin-left: 53px;
+										left:0%;
+										margin-left: 40%;
 									}
 								}
-								/*
-								&.lauren {
-									background-position: 0 0;
-
-									&.active {
-										background-position: 0 -147px;
-
-										&:after {
-											left: 0%;
-										}
-									}
-
-								}
-
-								&.susan {
-									background-position: 0 -290px;
-
-									&.active {
-										background-position: 0 -437px;
-
-										&:after {
-											left: 0%;
-										}
-									}
-								}
-								&.aaron {
-									background-position: 0 -582px;
-
-									&.active {
-										background-position: 0 -729px;
-
-										&:after {
-											left: 2%;
-										}	
-									}
-								}
-								&.kristie {
-									margin-right: 0;
-									background-position: 0 -873px;
-
-									&.active {
-										background-position: 0 -1020px;
-										
-										&:after {
-											left: 1%;
-										}
-									}
-								}
-								*/
 							}
+
 						}
 					}
-
-					
 					div.carousel-inner {
-						position: relative;
-						background-color: $panel-background;
-						color: #fff;
 
 						h3 {
 							color: #666;
-							font-size: 220%;
+							font-size: 250%;
 							font-weight: 400;
 							margin-top: 0;
 							padding-top: 40px;
@@ -851,13 +700,13 @@ body {
 						.item {
 							float: left;
 							width: 100%;
-							padding-left: 13%;
-							font-size: 100%;
+							padding-left: 10%;
+							font-size: 110%;
 							min-height: 400px;
-							background: transparent url('../images/bg-lauren.png') no-repeat 80% 0;
+							background-position: 80% 0;
 
 							em {
-								font-size: 150%;
+								font-size: 160%;
 								font-style: normal;
 								font-weight: 500;
 							}
@@ -867,32 +716,20 @@ body {
 								padding: 20px 0 0 0;
 								
 								li {
-									width: 50%;
+									width: 56%;
 									line-height: 1.4em;
 									font-weight: 300;
 									margin-bottom: 15px;
 									padding-bottom: 0;
 								}
 							}
-
-							&.susan {
-								background-image: url('../images/bg-susan.png');
-							}
-							&.aaron {
-								background-image: url('../images/bg-aaron.png');
-							}
-							&.kristie {
-								background-image: url('../images/bg-kristie.png');
-							}
 						}
 					}
 
 					.carousel-control {
 						top: 65%;
-						background: transparent;
 						border: none;
-						font-size: 200px;
-						opacity: .50%;
+						font-size: 280px;
 						width: 100px;
 						height: 100px;
 
@@ -905,29 +742,53 @@ body {
 					}
 				}
 			}
-
 			section#join-us {
+				padding: 60px 0 40px 0;
+
 				div.inner {
 					background-position: 120px 0;
+					color: #666;
+					padding: 0 125px 0 360px;
 
 					h3 {
-						font-size: 140%;	
+						font-size: 155%;
+						font-weight: 300;
+						padding-top: 0;
+
+						em {
+							font-weight: bold;
+							font-style: normal;
+						}
 					}
 
 					p {
-						font-size: 140%;
+						font-size: 155%;
+						line-height: 1.5em;
+						margin: 5% 0;
+						padding: 0;
 					}
+
 					form {
-						margin-top: 20px;
+
+						input {
+							margin-bottom: 10px;
+							width: 300px;
+							padding: 10px;
+							font-size: 1.5em;
+							line-height: 1.5em;
+						}
+						.btn {
+							height: 40px;
+							font-weight: 100;
+							font-size: 1.5em;
+							padding: 0 45px;
+						}
 					}
 				}
 			}
 			aside {
-				border-left: 15px solid $second-level-border;
-				background: transparent url('../images/paper-texture.png') repeat;
 
 				p {
-					text-align: center;
 					padding: 15px 0;
 					margin: 0 17%;
 					font-size: 125%;
@@ -936,13 +797,11 @@ body {
 			}
 			footer {
 				p {
-					font-size: 120%;
+					font-size: 140%;
 				}
 			}
-
 		}
 	}
-
 
 }
  
