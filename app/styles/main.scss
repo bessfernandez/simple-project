@@ -467,15 +467,16 @@ body {
 								}
 								
 								&.active {
-										&:after {
-										bottom:-54%;
+									
+									&:after {
+										bottom:-55%;
 									}
 
 									&:after {
 										border-color: rgba(69, 182, 202, 0);
 										border-bottom-color: #45b6ca;
 										border-width: 10px;
-										left:0%;
+										left: 0%;
 										margin-left: 40%;
 									}
 								}
