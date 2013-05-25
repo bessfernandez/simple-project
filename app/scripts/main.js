@@ -33,32 +33,45 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
      });
 
 
-    var headerLetters = $('h2').html().replace(/(\w)/g, "<span class='header-letter'>$&</span>")
-    var headerEls = $(headerLetters)
+    var headerLetters = $('header h2').html().replace(/(\w)/g, "<span class='header-letter'>$&</span>");
+    var headerEls = $(headerLetters);
+    // replace header letters with spans
     $('header h2').html(headerEls);
-    
-    // shuffle header els for randomization
-    var shuffle = _.shuffle(headerEls);
 
-    var loadedIndex = 0;
+
+    // fade in para and then anchors
+    var headerAnchors = $('header p a').hide();
+    $('header p').fadeIn(1000, function() {
+        $('header p a').fadeIn(1000);
+    });
+
+
+    // set header to block
     $('header h2').show();
 
-    //loadContent(); //Initiate it once on page load...
-    var loader = window.setInterval(loadContent, 400); 
+    // shuffle header els for randomization
+    var shuffle = _.shuffle(headerEls);
+    // set first shuffle index
+    var loadedIndex = 0;
+    // loadContent(); //Initiate it once on page load...
+    var loader = window.setInterval(loadContent, 200); 
    
 
-    function loadContent(timer) {
+    function loadContent() {
        
-        $(shuffle[loadedIndex]).fadeIn();
+        $(shuffle[loadedIndex]).fadeIn('slow');
         
         loadedIndex++; //Increase the array counter.
 
-        if (shuffle.length == loadedIndex) { //If reached the end of the array...
+        // end of array reached
+        if (shuffle.length == loadedIndex) {
             
-            loadedIndex = 0; //Reset the counter
-            clearInterval(loader); // clear the interval
+            loadedIndex = 0;
+            // clear the interval
+            clearInterval(loader);
         }
     }
+
 
   
     // use app here
