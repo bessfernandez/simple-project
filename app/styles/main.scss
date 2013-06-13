@@ -86,7 +86,7 @@ body {
 			min-height: 320px;
 
 			h2 {
-				display: none;
+				visibility: hidden;
 				color: $light-blue;
 				text-align: center;
 				font-size: 320%;
@@ -94,10 +94,15 @@ body {
 				font-weight: 400;
 				text-transform: uppercase;
 				margin: 10px 0px;
+
+				span.header-letter {
+					visibility: hidden;
+				}
 			}
 
 			p {
-				display: none;
+				visibility: hidden;
+				display: block;
 				font-size: 100%;
 				line-height: 1.8em;
 				text-align: left;
@@ -426,19 +431,13 @@ body {
 				min-height: 620px;
 				
 				h2 {
-					display: none;
 					font-size: 1020%;
 					line-height: 40.29px;
 					font-weight: 200;
 					margin: 90px 60px 9% 60px;
-
-					span.header-letter {
-						display: none;
-					}
 				}
 
 				p {
-					display: none;
 					font-size: 220%;
 					line-height: 1.6em;
 					padding: 0 8%;
@@ -606,7 +605,7 @@ body {
 @media (min-width: 768px) and (max-width: 979px) {
 	body {
 		.container-fluid {
-
+			border: 1px solid purple;
 			nav#primary {
 				background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
@@ -631,19 +630,13 @@ body {
 				min-height: 620px;
 				
 				h2 {
-					display: none;
 					font-size: 1020%;
 					line-height: 40.29px;
 					font-weight: 200;
 					margin: 90px 60px 9% 60px;
-
-					span.header-letter {
-						display: none;
-					}
 				}
 
 				p {
-					display: none;
 					font-size: 220%;
 					line-height: 1.6em;
 					padding: 0 8%;
@@ -810,6 +803,8 @@ body {
 @media (max-width: 767px) {
 
 	body {
+		border: 1px solid green;
+
 		.container-fluid {
 
 			nav#primary {
@@ -822,10 +817,4 @@ body {
 	
 }
  
-/* Landscape phones and down */
 
-@media (max-width: 480px) {
-
-
-
-}

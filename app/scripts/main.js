@@ -29,49 +29,86 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
          }
 
          //go to destination
-         $('html,body').animate({scrollTop:dest + -50}, 500,'swing');
+         $('html,body').animate({scrollTop:dest}, 500,'swing');
      });
 
 
-    var headerLetters = $('header h2').html().replace(/(\w)/g, "<span class='header-letter'>$&</span>");
-    var headerEls = $(headerLetters);
-    // replace header letters with spans
-    $('header h2').html(headerEls);
+    var simple = {
 
+        init: function() {
 
-    // fade in para and then anchors
-    var headerAnchors = $('header p a').hide();
-    $('header p').fadeIn(1000, function() {
-        $('header p a').fadeIn(1000);
-    });
+            this.headerTitle = $('header h2');
+            this.headerContent = $('header p');
 
+            this.headerTitleSpanClass = "header-letter";
+            this.headerContentSpanClass = "header-fragment";
 
-    // set header to block
-    $('header h2').show();
+            this.wrapContent();
 
-    // shuffle header els for randomization
-    var shuffle = _.shuffle(headerEls);
-    // set first shuffle index
-    var loadedIndex = 0;
-    // loadContent(); //Initiate it once on page load...
-    var loader = window.setInterval(loadContent, 200); 
-   
+        },
 
-    function loadContent() {
-       
-        $(shuffle[loadedIndex]).fadeIn('slow');
-        
-        loadedIndex++; //Increase the array counter.
+        wrapContent: function() {
+            var self = this;
 
-        // end of array reached
-        if (shuffle.length == loadedIndex) {
+            var headerLetters = this.headerTitle.html().replace(/(\w)/g, "<span class='" + this.headerTitleSpanClass + "'>$&</span>"),
+                headerEls = $(headerLetters);
+
+            // replace header letters with spans
+            this.headerTitle.html($(headerEls));
             
-            loadedIndex = 0;
-            // clear the interval
-            clearInterval(loader);
+            this.headerContent.contents().each(function(i, el) { 
+                // wrap paragraph contents in spans
+                $(el).wrap('<span class="' + self.headerContentSpanClass + '"></span>');
+            });
+
+            this.randomizeContent(headerLetters, headerEls);
+        },
+
+        randomizeContent: function(headerLetters, headerEls) {
+
+
+            // shuffle header content randomization
+            this.shuffleHeader = _.shuffle(headerEls);
+            this.shuffleHeaderContent = _.shuffle($('span.' + this.headerContentSpanClass));
+
+            this.loadContent();
+
+        },
+
+        loadContent: function() {
+            var self = this;
+
+
+            // set first shuffle index
+            var loadedIndex = 0;
+            
+            // load content
+            loadContent();
+
+            var loader = window.setInterval(loadContent, 100); 
+
+            function loadContent() {
+
+                $(self.shuffleHeader[loadedIndex]).css('visibility', 'visible');
+                $(self.shuffleHeaderContent[loadedIndex]).css('visibility', 'visible');
+                
+                loadedIndex++; //Increase the array counter.
+
+                // end of array reached
+                if (self.shuffleHeaderContent.length == loadedIndex) {
+                    
+                    loadedIndex = 0;
+                    // clear the interval
+                    clearInterval(loader);
+                }
+            }
         }
+        
+
     }
 
+    // initialize simple app
+    simple.init();
 
   
     // use app here
