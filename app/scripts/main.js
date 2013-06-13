@@ -25,7 +25,7 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
          if($(this.hash).offset().top > $(document).height()-$(window).height()){
               dest = $(document).height()-$(window).height();
          } else {
-              dest = $(this.hash).offset().top;
+              dest = $(this.hash).offset().top + -80;
          }
 
          //go to destination
@@ -77,7 +77,6 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
 
         loadContent: function() {
             var self = this;
-
 
             // set first shuffle index
             var loadedIndex = 0;

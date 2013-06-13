@@ -38,6 +38,10 @@ body {
 	.container-fluid {
 
 		nav#primary {
+			position: fixed;
+			width: 100%;
+			z-index: 100;
+			background-color: #fff;
 			border-left: 15px solid $first-level-border;
 			padding: 0 15px;
 
@@ -49,6 +53,12 @@ body {
 					padding: 2% 0%;
 					font-size: 90%;
 					font-weight: 400;
+
+					a {
+						text-decoration: none;
+						border-bottom: none;
+						color: inherit;
+					}
 
 					em {
 						color: $light-blue;
@@ -80,6 +90,7 @@ body {
 				}
 		}
 		header {
+			margin-top: 80px;
 			border-left: 15px solid $first-level-border;
 			background: #b8e2fa url('../images/header-bg.jpg') center bottom no-repeat;
 			padding: 15px;
@@ -408,7 +419,8 @@ body {
 			margin: 0 auto;
 
 			nav#primary {
-				background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
+				width: 1200px;
+				// background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
 				h1 {
 					padding: 1.7% 8%;
@@ -605,9 +617,9 @@ body {
 @media (min-width: 768px) and (max-width: 979px) {
 	body {
 		.container-fluid {
-			border: 1px solid purple;
+			// border: 1px solid purple;
 			nav#primary {
-				background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
+				// background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
 				h1 {
 					padding: 1.7% 8%;
@@ -803,7 +815,7 @@ body {
 @media (max-width: 767px) {
 
 	body {
-		border: 1px solid green;
+		// border: 1px solid green;
 
 		.container-fluid {
 
