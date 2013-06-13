@@ -79,7 +79,7 @@ body {
 						margin-left: 20px;
 
 						&.on {
-							background-color: blue;
+							background-color: #ccffff;
 						}
 
 						a {
@@ -288,6 +288,10 @@ body {
 								font-weight: 500;
 								margin-bottom: 15px;
 								padding-bottom: 0;
+
+								span.extraem {
+									font-style: italic;
+								}
 							}
 						}
 
@@ -429,12 +433,13 @@ body {
 				}
 
 				ul {
-					margin: 2.5% 8% 0 0;
-					padding: 0;
+					padding: 0 8% 0 0;
+					margin: 0;
 					font-size: 110%;
 
 					li {
-						padding-left: 60px;
+						text-align: center;
+						padding: 10.5% 30px;
 					}
 				}
 
@@ -564,8 +569,7 @@ body {
 						padding-top: 0;
 
 						em {
-							font-weight: bold;
-							font-style: normal;
+							font-weight: 700;
 						}
 					}
 
@@ -577,8 +581,10 @@ body {
 					}
 
 					form {
+						font-family: 'Raleway', sans-serif;
 
 						input {
+							font-family: 'Raleway', sans-serif;
 							margin-bottom: 10px;
 							width: 300px;
 							padding: 10px;
@@ -587,7 +593,7 @@ body {
 						}
 						.btn {
 							height: 40px;
-							font-weight: 100;
+							font-weight: 300;
 							font-size: 1.5em;
 							padding: 0 45px;
 						}
@@ -628,8 +634,8 @@ body {
 				}
 
 				ul {
-					margin: 2.5% 8% 0 0;
-					padding: 0;
+					padding: 2.5% 8% 2.5% 0;
+					margin: 0;
 					font-size: 110%;
 
 					li {

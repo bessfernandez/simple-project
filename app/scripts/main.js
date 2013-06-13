@@ -28,6 +28,9 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
               dest = $(this.hash).offset().top + -80;
          }
 
+         $('.scroll').parent().removeClass('on');
+         $(event.currentTarget).parent().addClass('on');
+
          //go to destination
          $('html,body').animate({scrollTop:dest}, 500,'swing');
      });
