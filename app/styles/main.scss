@@ -90,6 +90,7 @@ body {
 				}
 		}
 		header {
+			position: relative;
 			margin-top: 80px;
 			border-left: 15px solid $first-level-border;
 			background: #b8e2fa url('../images/header-bg.jpg') center bottom no-repeat;
@@ -128,6 +129,20 @@ body {
 					&:hover {
 						color: $medium-blue;
 						text-decoration: none;
+					}
+				}
+			}
+
+			.supp-content {
+				span {
+					display: none;
+					position: absolute;
+					top: 200px;
+					left: 500px;
+
+					p {
+						visibility: visible;
+						font-size: 1em;
 					}
 				}
 			}

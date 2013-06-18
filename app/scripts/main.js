@@ -35,13 +35,37 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
          $('html,body').animate({scrollTop:dest}, 500,'swing');
      });
 
+    $(document).on("click", ".header-letter", function(e) {
+        e.preventDefault();
+
+        var currentLetter = $(this).text().toLowerCase();
+
+
+        var headerCopy = $('p.manifesto');
+        headerCopy.hide();
+
+        $('.supp-content span').hide();
+
+        var currentContent = $('.' + currentLetter + '-content');
+        console.log(currentContent)
+        currentContent.show();
+
+        currentContent.find('a').on("click", function(e) {
+            e.preventDefault();
+            
+            currentContent.hide();
+            headerCopy.show();
+        })
+
+    });
+
 
     var simple = {
 
         init: function() {
 
             this.headerTitle = $('header h2');
-            this.headerContent = $('header p');
+            this.headerContent = $('header p').eq(0);
 
             this.headerTitleSpanClass = "header-letter";
             this.headerContentSpanClass = "header-fragment";
