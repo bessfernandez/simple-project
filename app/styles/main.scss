@@ -71,7 +71,7 @@ body {
 					font-size: 70%;
 					font-weight: 500;
 					margin: 0;
-					padding-top: 5.5%;
+					padding: 4.5% 15% 0 0;
 					list-style: none;
 
 					li {
@@ -91,10 +91,10 @@ body {
 		}
 		header {
 			position: relative;
-			margin-top: 80px;
+			margin-top: 0px;
 			border-left: 15px solid $first-level-border;
 			background: #b8e2fa url('../images/header-bg.jpg') center bottom no-repeat;
-			padding: 15px;
+			padding: 90px 15px;
 			min-height: 320px;
 
 			h2 {
@@ -137,13 +137,29 @@ body {
 				span {
 					display: none;
 					position: absolute;
+					color: #45b6ca;
 					background: transparent url('../images/header-sprite.png') no-repeat top left;
 					top: 250px;
 					left: 100px;
 
+					h3 {
+						font-weight: normal;
+						font-size: 250%;
+						margin-bottom: 0;
+					}
+
+
+					a {
+						display: block;
+						font-size: 95%;
+						margin-top: 5px;
+						border-bottom: none;
+					}
+
 					p {
 						visibility: visible;
-						font-size: 1em;
+						color: #999;
+						font-size: 200%;
 						margin: 0;
 						padding: 0;
 					}
@@ -192,7 +208,7 @@ body {
 						padding-top: 185px;
 						padding-left: 20px;
 						margin-top: -30px;
-						margin-left: 380px;
+						margin-left: 38 0px;
 					}
 
 					
@@ -490,7 +506,7 @@ body {
 			margin: 0 auto;
 
 			nav#primary {
-				width: 1200px;
+				max-width: 1200px;
 				// background: transparent url('../images/nav-btm-border.gif') repeat-x bottom left;
 
 				h1 {
@@ -512,7 +528,9 @@ body {
 
 			}
 			header {
+				margin-top: 80px;
 				min-height: 620px;
+				padding: 15px;
 				
 				h2 {
 					font-size: 1020%;
