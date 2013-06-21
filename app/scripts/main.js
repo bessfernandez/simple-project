@@ -40,7 +40,7 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
 
         var currentLetter = $(this).text().toLowerCase(),
             headerCopy = $('p.manifesto'),
-            headerSupplement = $('.supp-content span'),
+            headerSupplement = $('.supp-content div'),
             currentContent;
 
         if (currentLetter.length > 1) {
