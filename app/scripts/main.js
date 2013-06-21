@@ -35,25 +35,31 @@ require(['app', 'jquery', 'bootstrap', 'underscore'], function (app, $) {
          $('html,body').animate({scrollTop:dest}, 500,'swing');
      });
 
-    $(document).on("click", ".header-letter", function(e) {
+    $(document).on("click", ".header-letter, .header-fragment a", function(e) {
         e.preventDefault();
 
-        var currentLetter = $(this).text().toLowerCase();
+        var currentLetter = $(this).text().toLowerCase(),
+            headerCopy = $('p.manifesto'),
+            headerSupplement = $('.supp-content span'),
+            currentContent;
 
+        if (currentLetter.length > 1) {
+            // content click with associated target area
+            currentContent = $(e.currentTarget).attr('href');
+        } else {
+            // letter click with associated class to reveal
+            currentContent = $('.' + currentLetter + '-content');
+        }
 
-        var headerCopy = $('p.manifesto');
         headerCopy.hide();
+        headerSupplement.hide();
+     
+        $(currentContent).show();
 
-        $('.supp-content span').hide();
-
-        var currentContent = $('.' + currentLetter + '-content');
-        console.log(currentContent)
-        currentContent.show();
-
-        currentContent.find('a').on("click", function(e) {
+        $(currentContent).find('a').on("click", function(e) {
             e.preventDefault();
             
-            currentContent.hide();
+            $(currentContent).hide();
             headerCopy.show();
         })
 
